@@ -71,8 +71,8 @@ An internal HTTP client allows for immediate verification of payloads.
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/username/requestal.git
-    cd requestal
+    git clone https://github.com/mohmmedalariki/Requestal.git
+    cd Requestal
     ```
 
 2.  **Install dependencies**:
