@@ -50,7 +50,7 @@ An internal HTTP client allows for immediate verification of payloads.
 4.  **Send**: Click "Send".
 5.  **Analyze**: The "Response" tab immediately shows a diff where the server's error message appeared, ignoring the timestamp change in the header.
 
-![Editing Request](screenshots/Editing.png)
+![Editing Request](screenshots/Editing.jpeg)
 
 ### Format Shifting
 1.  **Capture**: Capture a standard JSON API request.
